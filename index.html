@@ -8,6 +8,39 @@
 </head>
 <body>
     <h1>Kanban Task Board</h1>
+    <div id="main">
+        <div class="column" id="to-do">
+            <div>
+                <h1>To-Do</h1>
+            </div>
+            <div class="cards"></div>
+            <button id="btn1">Add Card +</button>
+        </div>
+        <div class="column" id="in-progress">
+            <div>
+                <h1>In-Progress</h1>
+            </div>
+            <div class="cards"></div>
+            <button id="btn2">Add Card +</button>
+        </div>
+        <div class="column" id="done">
+            <div>
+                <h1>Done</h1>
+            </div>
+            <div class="cards"></div>
+            <button id="btn3">Add Card +</button>
+        </div>
+    </div>
+    <div id="modal" class="hidden">
+  <div class="modal-box">
+    <h2>Add Card</h2>
+    <input type="text" id="card-title" placeholder="Card title...">
+    <textarea id="card-desc" placeholder="Description..."></textarea>
+    <button id="save-btn">Save</button>
+    <button id="cancel-btn">Cancel</button>
+  </div>
+</div>
+
     <script src="script.js"></script>
 </body>
 </html>
