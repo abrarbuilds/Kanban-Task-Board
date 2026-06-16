@@ -128,10 +128,19 @@ This project demonstrates practical implementation of:
 
 ⸻
 
-📸 Screenshots
+## 📸 Screenshots
 
+### 🏠 Main Board
 
+![Home](Screenshots/Home.png)
 
+### ➕ Add Task Modal
+
+![Modal](Screenshots/Modal.png)
+
+### ✏️ Edit Task Modal
+
+![Modal2](Screenshots/Modal2.png)
 ⸻
 
 👨‍💻 Author
