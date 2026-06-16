@@ -138,7 +138,7 @@ This project demonstrates practical implementation of:
 
 ![Modal](Screenshots/Modal.png)
 
-### ✏️ Edit Task Modal
+### ✏️ Drag Task Modal
 
 ![Modal2](Screenshots/Modal2.png)
 ⸻
