@@ -130,7 +130,7 @@ This project demonstrates practical implementation of:
 
 📸 Screenshots
 
-Project screenshots will be added soon.
+
 
 ⸻
 
@@ -141,6 +141,8 @@ Abrar Sheikh
 Developed as part of the Semester 2 JavaScript OJT Project to demonstrate advanced front-end development concepts including drag-and-drop interactions, task management, state persistence, and local storage integration.
 
 ⸻
+Live Demo Link
+https://abrarbuilds.github.io/Kanban-Task-Board/
 
 📄 License
 
