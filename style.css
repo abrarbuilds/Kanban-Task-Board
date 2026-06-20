@@ -89,7 +89,7 @@
     display:flex;
     gap:22px;
     padding:26px;
-    align-items:flex-start;
+    align-items:stretch;
     overflow-x:auto;
     width:100%;
     height:calc(100vh - 140px);
@@ -292,6 +292,7 @@
       border-radius:10px;
       padding:12px;
       max-width:none;
+      min-height:60vh;
     }
     .column-head{
       gap:8px;
