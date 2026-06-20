@@ -91,12 +91,16 @@
     padding:26px;
     align-items:flex-start;
     overflow-x:auto;
+    width:100%;
+    height:calc(100vh - 140px);
+    justify-content:center;
   }
   .column{
     background:var(--paper-deep);
     border-radius:14px;
-    flex:1 1 0;
+    flex:1 1 auto;
     min-width:280px;
+    max-width:400px;
     padding:14px;
     display:flex;
     flex-direction:column;
@@ -129,6 +133,8 @@
   .column-body{
     display:flex;flex-direction:column;gap:14px;
     min-height:40px;
+    flex:1;
+    overflow-y:auto;
   }
   .column-body.drag-over{background:rgba(0,0,0,.04);border-radius:10px;}
 
@@ -278,11 +284,14 @@
       padding:18px;
       gap:14px;
       overflow-x:visible;
+      height:auto;
+      justify-content:flex-start;
     }
     .column{
       min-width:100%;
       border-radius:10px;
       padding:12px;
+      max-width:none;
     }
     .column-head{
       gap:8px;
@@ -401,12 +410,15 @@
       padding:12px;
       gap:12px;
       overflow-x:visible;
+      height:auto;
+      justify-content:flex-start;
     }
     .column{
       min-width:100%;
       border-radius:8px;
       padding:10px;
       gap:10px;
+      max-width:none;
     }
     .column-head{
       gap:8px;
