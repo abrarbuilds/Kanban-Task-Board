@@ -100,8 +100,12 @@
             </form>
         </div>
     </div>
-    <script src="script.js"></script>
-
+    <!-- Modules load in dependency order: state → render → dragdrop → modal → main -->
+    <script src="Js/state.js"></script>
+    <script src="Js/render.js"></script>
+    <script src="Js/dragdrop.js"></script>
+    <script src="Js/modal.js"></script>
+    <script src="Js/main.js"></script>
 </body>
 
 </html>
