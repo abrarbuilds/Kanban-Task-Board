@@ -167,7 +167,7 @@
     margin:0 0 12px;
     font-family:var(--font-mono);
   }
-  .card-footer{display:flex;align-items:center;gap:10px;}
+  .card-footer{display:flex;align-items:center;gap:10px;flex-wrap:wrap;}
   .avatar{
     width:24px;height:24px;border-radius:50%;
     background:var(--ink);color:#fff;
@@ -215,11 +215,12 @@
   .field input, .field select, .field textarea{
     font-family:var(--font-mono);font-size:13px;padding:8px 10px;
     border:1px solid var(--line);border-radius:7px;background:#fff;color:var(--text);
+    width:100%;
   }
   .field textarea{resize:vertical;min-height:60px;}
   .field-row{display:flex;gap:10px;}
   .field-row .field{flex:1;}
-  .modal-actions{display:flex;justify-content:space-between;align-items:center;margin-top:16px;}
+  .modal-actions{display:flex;justify-content:space-between;align-items:center;margin-top:16px;gap:8px;flex-wrap:wrap;}
   .btn{
     font-family:var(--font-mono);font-size:13px;padding:9px 16px;border-radius:8px;cursor:pointer;border:none;
   }
@@ -230,23 +231,302 @@
   .btn-danger{background:none;color:var(--pri-high);}
   .btn-danger:hover{text-decoration:underline;}
 
+  /* ---------- Tablet (768px) ---------- */
   @media (max-width:768px){
-    .board{flex-direction:column;padding:0;gap:18px;}
-    .column{min-width:0;border-radius:0;}
-    .topbar{flex-direction:column;align-items:flex-start;padding:16px 18px 12px;}
-    .topbar-right{gap:16px;width:100%;}
-    .subbar{padding:8px 18px;font-size:9.5px;}
+    .topbar{
+      flex-direction:column;
+      align-items:flex-start;
+      padding:14px 20px 10px;
+      gap:12px;
+    }
+    .topbar-title h1{
+      font-size:22px;
+    }
+    .topbar-title .icon{
+      font-size:20px;
+    }
+    .topbar-right{
+      flex-direction:row;
+      gap:12px;
+      width:100%;
+      justify-content:space-between;
+      align-items:center;
+      flex-wrap:wrap;
+    }
+    .stat .num{
+      font-size:20px;
+    }
+    .stat .lbl{
+      font-size:9px;
+    }
+    .progress-wrap{
+      min-width:140px;
+    }
+    .progress-track{
+      width:100px;
+    }
+    .reset-btn{
+      font-size:11px;
+      padding:6px 12px;
+    }
+    .subbar{
+      padding:6px 20px;
+      font-size:9px;
+    }
+    .board{
+      flex-direction:column;
+      padding:18px;
+      gap:14px;
+      overflow-x:visible;
+    }
+    .column{
+      min-width:100%;
+      border-radius:10px;
+      padding:12px;
+    }
+    .column-head{
+      gap:8px;
+    }
+    .col-pill{
+      font-size:11px;
+      padding:5px 10px;
+    }
+    .col-count{
+      font-size:12px;
+    }
+    .card{
+      padding:12px 12px 10px;
+    }
+    .card-title{
+      font-size:20px;
+      margin-bottom:4px;
+    }
+    .card-desc{
+      font-size:12px;
+      margin-bottom:8px;
+    }
+    .card-footer{
+      gap:8px;
+    }
+    .tag{
+      font-size:10px;
+      padding:2px 8px;
+    }
+    .modal{
+      max-width:90%;
+      padding:18px;
+    }
+    .modal h2{
+      font-size:17px;
+    }
+    .field{
+      margin-bottom:10px;
+    }
+    .field-row{
+      gap:8px;
+    }
+    .btn{
+      font-size:12px;
+      padding:8px 14px;
+    }
   }
 
+  /* ---------- Mobile (320px) ---------- */
   @media (max-width:420px){
-    .board{gap:14px;}
-    .column{padding:14px 12px;}
-    .topbar-title h1{font-size:21px;}
-    .topbar-right{gap:12px 18px;}
-    .progress-wrap{order:99;width:100%;}
-    .progress-track{width:100%;}
-    .card-title{font-size:20px;}
-    .card-desc{font-size:12px;}
-    .modal{padding:16px;max-width:100%;}
-    .field-row{flex-direction:column;gap:0;}
+    :root{
+      --font-size-base:14px;
+    }
+    html, body {
+      font-size:14px;
+    }
+    .topbar{
+      padding:10px 14px 8px;
+      gap:8px;
+    }
+    .topbar-title{
+      gap:6px;
+      width:100%;
+    }
+    .topbar-title .icon{
+      font-size:18px;
+    }
+    .topbar-title h1{
+      font-size:18px;
+      letter-spacing:0;
+    }
+    .topbar-title .meta{
+      font-size:10px;
+      display:none;
+    }
+    .topbar-right{
+      flex-direction:column;
+      gap:8px;
+      width:100%;
+      order:99;
+    }
+    .stat{
+      flex:1;
+    }
+    .stat .num{
+      font-size:18px;
+    }
+    .stat .lbl{
+      font-size:8px;
+      margin-top:1px;
+    }
+    .progress-wrap{
+      min-width:100%;
+      order:98;
+      margin-top:4px;
+    }
+    .progress-track{
+      width:100%;
+      height:4px;
+    }
+    .progress-pct{
+      font-size:10px;
+    }
+    .reset-btn{
+      font-size:10px;
+      padding:6px 10px;
+      gap:4px;
+    }
+    .subbar{
+      padding:6px 14px;
+      font-size:8px;
+      letter-spacing:1px;
+    }
+    .board{
+      flex-direction:column;
+      padding:12px;
+      gap:12px;
+      overflow-x:visible;
+    }
+    .column{
+      min-width:100%;
+      border-radius:8px;
+      padding:10px;
+      gap:10px;
+    }
+    .column-head{
+      gap:8px;
+    }
+    .col-pill{
+      font-size:10px;
+      padding:4px 9px;
+    }
+    .col-pill .dot{
+      width:5px;
+      height:5px;
+    }
+    .col-count{
+      font-size:11px;
+    }
+    .col-add{
+      font-size:16px;
+      padding:2px 4px;
+    }
+    .card{
+      padding:10px 10px 8px;
+      border-left-width:4px;
+      box-shadow:inset 0 1px 0 rgba(255,255,255,.6), 0 4px 10px rgba(20,15,5,.06);
+    }
+    .card:nth-child(3n){transform:rotate(-.2deg);}
+    .card:nth-child(3n+1){transform:rotate(.2deg);}
+    .card:nth-child(3n+2){transform:rotate(0deg);}
+    .card-title{
+      font-size:18px;
+      margin-bottom:3px;
+    }
+    .card-desc{
+      font-size:11px;
+      line-height:1.4;
+      margin-bottom:8px;
+    }
+    .card-tags{
+      gap:4px;
+      margin-bottom:6px;
+    }
+    .tag{
+      font-size:9px;
+      padding:2px 7px;
+    }
+    .card-footer{
+      gap:6px;
+      font-size:10px;
+    }
+    .avatar{
+      width:20px;
+      height:20px;
+      font-size:9px;
+    }
+    .priority{
+      font-size:10px;
+      gap:4px;
+    }
+    .priority .dot{
+      width:5px;
+      height:5px;
+    }
+    .card-date{
+      font-size:10px;
+      gap:2px;
+    }
+    .add-card-btn{
+      font-size:11px;
+      padding:8px;
+      border-radius:7px;
+    }
+    /* Modal at mobile */
+    .overlay{
+      padding:12px;
+    }
+    .modal{
+      max-width:100%;
+      padding:14px;
+      border-radius:10px;
+    }
+    .modal h2{
+      font-size:16px;
+      margin-bottom:12px;
+    }
+    .field{
+      margin-bottom:10px;
+      gap:4px;
+    }
+    .field label{
+      font-size:10px;
+    }
+    .field input, .field select, .field textarea{
+      font-size:12px;
+      padding:7px 8px;
+      border-radius:6px;
+    }
+    .field textarea{
+      min-height:50px;
+    }
+    .field-row{
+      flex-direction:column;
+      gap:0;
+    }
+    .field-row .field{
+      margin-bottom:10px;
+    }
+    .modal-actions{
+      margin-top:12px;
+      gap:6px;
+      flex-direction:column-reverse;
+    }
+    .btn{
+      font-size:12px;
+      padding:8px 12px;
+      width:100%;
+      text-align:center;
+    }
+    .btn-primary{
+      order:1;
+    }
+    .btn-ghost, .btn-danger{
+      order:2;
+    }
   }
